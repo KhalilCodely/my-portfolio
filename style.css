@@ -209,7 +209,12 @@ header:hover{
       display: none;
       font-size: 28px;
       cursor: pointer;
+        color:white;
     }
+.menu-toggle:hover{
+     transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #b37cff);
+}
 
     @media (max-width: 768px) {
       nav {
@@ -349,6 +354,7 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
