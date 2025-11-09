@@ -23,7 +23,8 @@
 
     /* ===== Navbar ===== */
     header {
- background: linear-gradient(to bottom, #260f33, rgb(255, 255, 255));      color: white;
+ background: linear-gradient(to bottom, #13011d, rgb(194, 183, 207));  
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -349,5 +350,6 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
