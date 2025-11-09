@@ -244,15 +244,23 @@ header:hover{
 }
 
 .contact-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1); /* Makes icons white for dark backgrounds */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* white on dark bg */
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+}
+.contact-icon[alt="Resume"]:hover {
+  filter: brightness(1.3) drop-shadow(0 0 10px #ffb3ff);
+  transform: scale(1.3);
 }
 
+
+
 .contact-icon:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #b37cff);
+  transform: scale(1.25);
+  filter: brightness(1) drop-shadow(0 0 8px #b37cff);
+  box-shadow: 0 0 10px rgba(179, 124, 255, 0.6);
 }
 
 /* Mobile layout */
