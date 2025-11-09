@@ -23,15 +23,14 @@
 
  /* ===== Navbar ===== */
     header {
- background: linear-gradient(to bottom, #13011d, rgb(255, 255, 255));   
+ background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));    
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
       flex-wrap: wrap;
     }
-header:hover{
-   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));  
+
 
 }
     .logo {
@@ -356,6 +355,7 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
