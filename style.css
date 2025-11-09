@@ -205,6 +205,7 @@ header:hover{
 
     /* ===== Responsive Navbar ===== */
     .menu-toggle {
+        color:white;
       display: none;
       font-size: 28px;
       cursor: pointer;
@@ -348,4 +349,5 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
