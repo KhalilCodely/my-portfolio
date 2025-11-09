@@ -31,7 +31,7 @@
       flex-wrap: wrap;
     }
 header:hover{
-   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));    
+   background: linear-gradient(to bottom, #260f33, white);    
 
 }
     .logo {
