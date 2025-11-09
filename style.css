@@ -210,6 +210,8 @@ header:hover{
       font-size: 28px;
       cursor: pointer;
         color:white;
+        width:30px;
+        height:30px;
     }
 .menu-toggle:hover{
      transform: scale(1.2);
@@ -354,6 +356,7 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
