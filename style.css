@@ -1,0 +1,351 @@
+
+    /* ===== Base Styles ===== */
+    :root {
+      --primary: #2f0846;
+      --secondary: #260f33;
+      --light-bg: #faf7ff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      background: linear-gradient(180deg, var(--light-bg) 0%, #ffffff 100%);
+      color: #2c2c2c;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== Navbar ===== */
+    header {
+ background: linear-gradient(to bottom, #260f33, rgb(255, 255, 255));      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
+header:hover{
+   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));      color: white;
+
+}
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ===== Hero Section ===== */
+    #about-me {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .profile_image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 8px 20px rgba(118, 0, 188, 0.25);
+      transition: 0.4s;
+    }
+
+    .profile_image:hover {
+      transform: scale(1.05);
+    }
+
+    #about-me h1 {
+      background: linear-gradient(90deg, #2e0646, #b37cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.2rem;
+    }
+
+    #about-me p {
+      max-width: 700px;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #2e0646, #b37cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ===== Skills ===== */
+    .all_skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .skill {
+      background: #fff;
+      border: 2px solid rgba(118, 0, 188, 0.15);
+      border-radius: 14px;
+      box-shadow: 0 6px 20px var(--shadow);
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 25px rgba(118, 0, 188, 0.25);
+    }
+
+    .skill img {
+      height: 45px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== Projects ===== */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px 20px;
+      border: 2px solid rgba(118, 0, 188, 0.15);
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: 0.3s;
+      text-align: left;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 25px rgba(118, 0, 188, 0.25);
+    }
+
+    .project-card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    /* ===== Lists ===== */
+    ul {
+      text-align: left;
+      margin-left: 25px;
+      color: #555;
+    }
+
+    /* ===== Scroll to top ===== */
+    .iconbutton {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #b37cff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 3%;
+      bottom: 3%;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(33, 5, 49, 0.4);
+      transition: all 0.3s;
+    }
+
+    .iconbutton:hover {
+      transform: scale(1.1);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #260f33;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive Navbar ===== */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--secondary);
+        padding: 10px 0;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    /* ===== Logo + Contact Icons ===== */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Makes icons white for dark backgrounds */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #b37cff);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .logo {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+/* ===== Certificates Section ===== */
+#certificates {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #faf7ff 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.certificates-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.certificates-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+}
+
+.certificates-container::-webkit-scrollbar {
+  display: none;
+}
+
+.certificate-card {
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 3px solid #7600bc;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(118, 0, 188, 0.3);
+}
+
+.certificate-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #3a2a4d;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #7600bc, #b37cff);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(118, 0, 188, 0.4);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(118, 0, 188, 0.5);
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+

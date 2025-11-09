@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khalil El Youssef Portfolio</title>
+  <script src="script.js"></script>
+ <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+  <header>
+  <div class="logo">
+  Khalil El Youssef
+  <div  class="contact-icons">
+    <a href="mailto:khalilooyoussef@gmail.com" title="Email Khalil">
+      <img src="html_finalprojimages/envelope.png" width="30px" height="30px" alt="Email" class="contact-icon">
+    </a>
+    <a href="tel:+96171765370" title="Call Khalil">
+      <img src="html_finalprojimages/phone.png" width="30px" height="30px"  alt="Phone" class="contact-icon">
+    </a>
+  </div>
+</div>
+    
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">☰</div>
+    <nav>
+      <a href="#about-me">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#devops">DevOps & Tools</a>
+    </nav>
+  </header>
+
+  <section id="about-me">
+    <img src="html_finalprojimages\IMG_20251102_232154_749.webp" alt="Profile" class="profile_image">
+    <div>
+      <h1>Hi, I'm Khalil El Youssef 👋</h1>
+      <p>Full Stack Developer and AI Engineer skilled in building modern, efficient, and intelligent solutions with .NET, React, and Python ML frameworks.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="all_skills">
+      <div class="skill"><img src="html_finalprojimages/html5.png" alt="HTML5"><h6>HTML5</h6><p>3 Years</p></div>
+      <div class="skill"><img src="html_finalprojimages/CSS3.png" alt="CSS3"><h6>CSS3</h6><p>3 Years</p></div>
+      <div class="skill"><img src="html_finalprojimages/js.jpeg" alt="JavaScript"><h6>JavaScript</h6><p>3 Years</p></div>
+      <div class="skill"><img src="html_finalprojimages/java.png" alt="Java"><h6>Java</h6><p>3 Years</p></div>
+      <div class="skill"><img src="html_finalprojimages/node.png" alt="Node"><h6>Node.js</h6><p>1 Year</p></div>
+      <div class="skill"><img src="html_finalprojimages\deep-learning.png" alt="Ai/Ml"><h6></h6>AI/ML<p> 2 Years</p></div>
+            <div class="skill"><img src="html_finalprojimages\sql-server.png" alt="SQL"><h6>SQL</h6><p>3 Years</p></div>
+             <div class="skill"><img src="html_finalprojimages\c-sharp.png" alt="C#"><h6>C#</h6><p>3 Years</p></div>
+     <div class="skill"><img src="html_finalprojimages\social.png" alt="Jquery"><h6>Jquery</h6><p>2 Years</p></div>
+          <div class="skill"><img src="html_finalprojimages\python.png" alt="python"><h6>Python</h6><p>2 Years</p></div>
+           <div class="skill"><img src="html_finalprojimages\php.png" alt="php"><h6>PHP</h6><p>3 Years</p></div>
+                <div class="skill"><img src="html_finalprojimages\react.png" alt="react"><h6>React</h6><p>1 Year</p></div>
+
+     
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <div class="projects-container">
+      <div class="project-card"><h3>Restaurant Website</h3><p>Responsive website built with HTML, CSS, and JS featuring an interactive menu and mobile-friendly design.</p></div>
+      <div class="project-card"><h3>Cryptocurrency Prediction</h3><p>Developed LSTM and Random Forest models for crypto price forecasting with Flask dashboard.</p></div>
+      <div class="project-card"><h3>3D Car Simulation Game</h3><p>Unity 3D driving game with C# physics-based controls and collision systems.</p></div>
+      <div class="project-card"><h3>Online Bookstore Management</h3><p>ASP.NET Core MVC app managing inventory, users, and orders using EF Core and LINQ.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>SADER, Beirut (2021–2025)</h3>
+        <ul>
+          <li>Built scalable .NET Core web applications with AI/ML integration.</li>
+          <li>Enhanced user experience using AJAX and optimized SQL queries.</li>
+          <li>Collaborated in Agile sprints and maintained Git repositories.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3>Freelancer (2023–Present)</h3>
+        <ul>
+          <li>Delivered full-stack apps using PHP, .NET, and React.</li>
+          <li>Integrated APIs, CI/CD pipelines, and cloud solutions.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="projects-container">
+      <div class="project-card"><h3>Lebanese International University</h3><p>B.S. in Computer Science (2021–2024)</p></div>
+      <div class="project-card"><h3>TLC Jdaideh</h3><p>BT3 in Information Technology (2018–2019)</p></div>
+    </div>
+  </section>
+
+ <section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="certificates-wrapper">
+    <button class="scroll-btn left" onclick="scrollCertificates(-1)">&#10094;</button>
+
+    <div class="certificates-container" id="certificatesContainer">
+      <div class="certificate-card">
+        <a href="https://www.credly.com/badges/557c188f-c67f-49d6-8bb8-457a689eb144/linked_in?t=sfaa15" target="_blank">
+          <img src="html_finalprojimages\cyberops.JPG" alt="Network Security (2024)">
+        </a>
+        <p>Network Security (2024)</p>
+      </div>
+
+      <div class="certificate-card">
+        <a href="https://www.coursera.org/account/accomplishments/verify/3SHY6M420KNF" target="_blank">
+          <img src="html_finalprojimages\intro to software.JPG" alt="IBM – Software Engineering">
+        </a>
+        <p>IBM – Software Engineering</p>
+      </div>
+
+      <div class="certificate-card">
+        <a href="https://www.credly.com/badges/3d211655-bcd5-44e2-bf4b-3f1d8d704028/public_url" target="_blank">
+          <img src="html_finalprojimages\python1.JPG" alt="CISCO – Python Essentials 1">
+        </a>
+        <p>CISCO – Python Essentials 1</p>
+      </div>
+
+      <div class="certificate-card">
+        <a href="https://learn.microsoft.com/en-us/users/khalilyoussef-3867/achievements" target="_blank">
+          <img src="html_finalprojimages\Certificates From Microsoft.JPG" alt="Microsoft – ASP.NET Core & MAUI">
+        </a>
+        <p>Microsoft – Certificates</p>
+      </div>
+
+      <div class="certificate-card">
+        <a href="https://www.coursera.org/account/accomplishments/certificate/AW2A64GRCRV5" target="_blank">
+          <img src="html_finalprojimages\Intro to Cloud.JPG" alt="IBM – Intro to Cloud Computing">
+        </a>
+        <p>IBM – Intro to Cloud Computing</p>
+      </div>
+      <div class="certificate-card">
+        <a href="html_finalprojimages\python2.JPG" target="_blank">
+          <img src="html_finalprojimages\python2.JPG" alt="Python2">
+        </a>
+        <p>CISCO – Python Essentials 2</p>
+      </div>
+       <div class="certificate-card">
+        <a href="https://www.credly.com/badges/e3d41251-6d4a-40d7-abd2-228859946ac8/public_url" target="_blank">
+          <img src="html_finalprojimages\Intro to machine learning.JPG" alt="introml">
+        </a>
+        <p>CISCO – Intro To Machine Learning</p>
+      </div>
+    </div>
+   
+    <button class="scroll-btn right" onclick="scrollCertificates(1)">&#10095;</button>
+  </div>
+</section>
+
+
+
+  <section id="devops">
+    <h2>DevOps & Tools</h2>
+    <div class="all_skills">
+      <div class="skill"> <img src="html_finalprojimages\git.png"><h6>Git / GitHub</h6><p>Version Control</p></div>
+      <div class="skill"><img src="html_finalprojimages\docker.png"><h6>Docker</h6><p>Containerization</p></div>
+      <div class="skill"><img src="html_finalprojimages\github.png"><h6>CI/CD</h6><p>GitHub Actions</p></div>
+      <div class="skill"> <img src="html_finalprojimages\api.png"><h6>Postman</h6><p>API Testing</p></div>
+      <div class="skill"><img src="html_finalprojimages\visual-studio.png"><h6>VS Code / Visual Studio</h6><p>IDE Tools</p></div>
+      <div class="skill"><img src="html_finalprojimages\gamification.png"><h6>Unity</h6><p>Game Development</p></div>
+    </div>
+  </section>
+
+  <div class="iconbutton">
+    <a href="#top">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="25px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </a>
+  </div>
+
+  <footer>
+    © 2025 Khalil El Youssef — Portfolio. Built with 💜 passion and code.
+  </footer>
+</body>
+</html>
