@@ -21,9 +21,9 @@
       scroll-behavior: smooth;
     }
 
-  /* ===== Navbar ===== */
+ /* ===== Navbar ===== */
     header {
- background: linear-gradient(to bottom, #13011d, rgb(126, 94, 161)); 
+ background: linear-gradient(to bottom, #13011d, rgb(255, 255, 255));   
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -31,7 +31,7 @@
       flex-wrap: wrap;
     }
 header:hover{
-   background: linear-gradient(to bottom, #260f33, white);    
+   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));  
 
 }
     .logo {
@@ -349,6 +349,7 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
