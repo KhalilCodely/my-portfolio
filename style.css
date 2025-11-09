@@ -31,10 +31,7 @@
       padding: 20px 40px;
       flex-wrap: wrap;
     }
-header:hover{
-   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));      color: white;
 
-}
     .logo {
       font-size: 28px;
       font-weight: 700;
@@ -350,6 +347,7 @@ header:hover{
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
