@@ -21,16 +21,17 @@
       scroll-behavior: smooth;
     }
 
- /* ===== Navbar ===== */
+    /* ===== Navbar ===== */
     header {
- background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));    
+ background: linear-gradient(to bottom, #13011d, rgb(255, 255, 255));   
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
       flex-wrap: wrap;
     }
-
+header:hover{
+   background: linear-gradient(to bottom, #260f33, rgb(27, 6, 75));  
 
 }
     .logo {
@@ -204,18 +205,11 @@
 
     /* ===== Responsive Navbar ===== */
     .menu-toggle {
-        color:white;
       display: none;
       font-size: 28px;
       cursor: pointer;
-        color:white;
-        width:20px;
-        height:20px;
+      color:white;
     }
-.menu-toggle:hover{
-     
-  filter: drop-shadow(0 0 6px #b37cff);
-}
 
     @media (max-width: 768px) {
       nav {
@@ -355,15 +349,4 @@
 .scroll-btn.right {
   right: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
