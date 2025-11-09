@@ -213,7 +213,7 @@
         height:20px;
     }
 .menu-toggle:hover{
-     transform: scale(1.2);
+     
   filter: drop-shadow(0 0 6px #b37cff);
 }
 
@@ -355,6 +355,7 @@
 .scroll-btn.right {
   right: 5px;
 }
+
 
 
 
