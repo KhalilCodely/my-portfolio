@@ -1,6 +1,11 @@
 function scrollCertificates(direction) {
   const container = document.getElementById('certificatesContainer');
-  const scrollAmount = 300; // pixels per click
+
+  if (!container) {
+    return;
+  }
+
+  const scrollAmount = Math.min(container.clientWidth * 0.85, 420);
   container.scrollBy({
     left: scrollAmount * direction,
     behavior: 'smooth'
@@ -18,7 +23,39 @@ function createChakraSpark(x, y) {
   spark.addEventListener('animationend', () => spark.remove());
 }
 
+function setupNavigation() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navigation = document.getElementById('primary-navigation');
+
+  if (!menuToggle || !navigation) {
+    return;
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navigation.addEventListener('click', (event) => {
+    if (event.target.matches('a')) {
+      navigation.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+function setupCertificateControls() {
+  document.querySelectorAll('[data-certificate-scroll]').forEach((button) => {
+    button.addEventListener('click', () => {
+      scrollCertificates(Number(button.dataset.certificateScroll));
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  setupNavigation();
+  setupCertificateControls();
+
   const animatedCards = document.querySelectorAll('.skill, .project-card, .certificate-card');
 
   animatedCards.forEach((card, index) => {
@@ -27,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) {
+      return;
+    }
+
     for (let i = 0; i < 6; i += 1) {
       createChakraSpark(event.clientX, event.clientY);
     }
