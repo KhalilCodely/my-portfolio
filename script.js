@@ -56,11 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
   setupCertificateControls();
 
-  const animatedCards = document.querySelectorAll('.skill, .project-card, .certificate-card');
+  const animatedCards = document.querySelectorAll('.skill, .project-card, .certificate-card, .process-path article, .showcase-panel div');
 
   animatedCards.forEach((card, index) => {
     card.style.setProperty('--entry-delay', `${Math.min(index * 60, 720)}ms`);
     card.classList.add('anime-entry');
+  });
+
+  const revealItems = document.querySelectorAll('section, .contact-strip');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16 });
+
+  revealItems.forEach((item) => {
+    item.classList.add('reveal-on-scroll');
+    revealObserver.observe(item);
   });
 
   document.addEventListener('pointerdown', (event) => {
