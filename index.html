@@ -3,242 +3,512 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Khalil El Youssef, a full-stack developer and AI engineer building polished web, cloud, and machine-learning solutions.">
-  <title>Khalil El Youssef | Full-Stack Developer & AI Engineer</title>
+  <meta name="description" content="Khalil Al Youssef — Full Stack Developer specializing in .NET Core, React, Next.js, and Azure. 4+ years building production web applications, REST APIs, and cloud-native systems.">
+  <title>Khalil Al Youssef | Full Stack Developer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1120'/%3E%3Ctext x='50' y='66' font-size='52' font-family='monospace' font-weight='700' fill='%2338bdf8' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
-
 <body id="top">
-  <div class="chakra-bg" aria-hidden="true">
-    <span class="chakra-orb orb-one"></span>
-    <span class="chakra-orb orb-two"></span>
-    <span class="chakra-orb orb-three"></span>
-    <span class="cloud-wisp wisp-one"></span>
-    <span class="cloud-wisp wisp-two"></span>
+
+  <div id="loader" aria-hidden="true">
+    <span class="loader-mark mono">KHALIL.DEV</span>
+    <span class="loader-pct mono" id="loaderPct">0%</span>
+    <span class="loader-bar"><span class="loader-fill" id="loaderFill"></span></span>
   </div>
-  <div class="leaf-burst" aria-hidden="true"></div>
+
+  <canvas id="scene-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="logo" href="#top" aria-label="Khalil El Youssef home">
-      <span class="logo-mark">葉</span>
-      <span class="logo-text">Khalil El Youssef</span>
+    <a class="logo" href="#top" aria-label="Khalil Al Youssef home">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">Khalil<span class="accent-dot">.</span>dev</span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
 
     <nav id="primary-navigation" aria-label="Primary navigation">
-      <a href="#about-me">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#experience">Experience</a>
-      <a href="#process">Process</a>
-      <a href="#education">Education</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#devops">Tools</a>
+      <a href="#about"><span class="nav-index">01.</span>About</a>
+      <a href="#skills"><span class="nav-index">02.</span>Skills</a>
+      <a href="#experience"><span class="nav-index">03.</span>Experience</a>
+      <a href="#projects"><span class="nav-index">04.</span>Projects</a>
+      <a href="#education"><span class="nav-index">05.</span>Education</a>
+      <a href="#contact"><span class="nav-index">06.</span>Contact</a>
+      <a class="nav-resume" href="html_finalprojimages/Dev_Khallil_97.pdf" target="_blank" rel="noopener">Resume</a>
     </nav>
   </header>
 
   <main>
-    <section id="about-me" class="ninja-hero section-panel">
-      <div class="profile-wrap">
-        <span class="chakra-ring ring-one"></span>
-        <span class="chakra-ring ring-two"></span>
-        <img src="html_finalprojimages/IMG_20251102_232154_749.webp" alt="Portrait of Khalil El Youssef" class="profile_image">
-        <span class="ninja-spark spark-one"></span>
-        <span class="ninja-spark spark-two"></span>
-      </div>
+    <section id="home" class="hero section-panel">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span>Open to Software Engineer / .NET / Full Stack roles</p>
+          <h1>Khalil Al Youssef</h1>
+          <p class="hero-role mono">I build <span id="typed-role">production web applications</span><span class="cursor-blink" aria-hidden="true">_</span></p>
+          <p class="hero-intro">Full Stack Developer with 4+ years of hands-on experience designing and delivering production web applications using <strong>.NET Core</strong>, <strong>React</strong>, and <strong>Next.js</strong> — from REST APIs and RBAC authentication to SQL-optimized backends and CI/CD-deployed services. Currently expanding into cloud-native architecture on <strong>Azure</strong> and LLM integration.</p>
 
-      <div class="hero-copy">
-        <p class="anime-kicker">Ghibli-inspired digital craft</p>
-        <h1>Building warm, story-rich products with clean code and AI.</h1>
-        <p class="hero-intro">Hi, I'm Khalil El Youssef — a Full Stack Developer and AI Engineer blending modern .NET, React, cloud workflows, and Python ML systems into calm, polished experiences that feel fast, friendly, and alive.</p>
+          <div class="hero-tags" aria-label="Core stack">
+            <span>.NET Core</span><span>React</span><span>Next.js</span><span>Azure</span><span>SQL Server</span>
+          </div>
 
-        <div class="hero-actions" aria-label="Portfolio actions">
-          <a class="btn primary" href="#projects">Explore Work</a>
-          <a class="btn secondary" href="html_finalprojimages/Dev_Khallil_97.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="html_finalprojimages/Dev_Khallil_97.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Highlights">
+            <div><strong class="counter" data-to="4" data-suffix="+">0+</strong><span>Years experience</span></div>
+            <div><strong class="counter" data-to="8" data-suffix="+">0+</strong><span>Production apps shipped</span></div>
+            <div><strong class="counter" data-to="3" data-suffix="">0</strong><span>Domains: health, e-comm, AI</span></div>
+          </div>
         </div>
 
-        <div class="hero-stats" aria-label="Professional highlights">
-          <div><strong>3+</strong><span>Years crafting</span></div>
-          <div><strong>12</strong><span>Core skills</span></div>
-          <div><strong>7</strong><span>Certificates</span></div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit-stage">
+            <div class="orbit-glow"></div>
+            <div class="ai-portrait">
+              <img class="orbit-photo" src="html_finalprojimages/IMG_20251102_232154_749.webp" alt="">
+              <span class="ai-portrait-ghost ghost-cyan" style="background-image:url('html_finalprojimages/IMG_20251102_232154_749.webp')"></span>
+              <span class="ai-portrait-ghost ghost-pink" style="background-image:url('html_finalprojimages/IMG_20251102_232154_749.webp')"></span>
+              <span class="ai-portrait-scan"></span>
+              <span class="ai-portrait-tag mono">AI-ENHANCED</span>
+            </div>
+            <div class="orbit-ring ring-a">
+              <span class="orbit-icon" style="--a:0deg"><img src="html_finalprojimages/c-sharp.png" alt=".NET / C#"></span>
+              <span class="orbit-icon" style="--a:60deg"><img src="html_finalprojimages/react.png" alt="React"></span>
+              <span class="orbit-icon" style="--a:120deg"><img src="html_finalprojimages/sql-server.png" alt="SQL Server"></span>
+              <span class="orbit-icon" style="--a:180deg"><img src="html_finalprojimages/docker.png" alt="Docker"></span>
+              <span class="orbit-icon" style="--a:240deg"><img src="html_finalprojimages/node.png" alt="Node.js"></span>
+              <span class="orbit-icon" style="--a:300deg"><img src="html_finalprojimages/git.png" alt="Git"></span>
+            </div>
+            <div class="orbit-ring ring-b">
+              <span class="orbit-icon" style="--a:30deg"><img src="html_finalprojimages/python.png" alt="Python"></span>
+              <span class="orbit-icon" style="--a:150deg"><img src="html_finalprojimages/php.png" alt="PHP"></span>
+              <span class="orbit-icon" style="--a:270deg"><img src="html_finalprojimages/html5.png" alt="HTML5"></span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="contact-strip" aria-label="Contact links">
-      <a href="mailto:khalilooyoussef@gmail.com">
-        <img src="html_finalprojimages/envelope.png" alt="" class="contact-icon">Email
-      </a>
-      <a href="tel:+96171765370">
-        <img src="html_finalprojimages/phone.png" alt="" class="contact-icon">Phone
-      </a>
-      <a href="https://www.linkedin.com/in/khalil-el-youssef-a4a1a1203/" target="_blank" rel="noopener">
-        <img src="html_finalprojimages/icons8-linkedin-50 (1).png" alt="" class="contact-icon">LinkedIn
-      </a>
-      <a href="https://github.com/KhalilCodely" target="_blank" rel="noopener">
-        <img src="html_finalprojimages/github.png" alt="" class="contact-icon">GitHub
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <span></span>
       </a>
     </section>
 
-    <section id="services" class="section-panel meadow-section">
+    <section id="about" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">What I can shape</p>
-        <h2><span class="section-symbol">✦</span>Services</h2>
+        <p class="eyebrow mono">01. About</p>
+        <h2>Profile Overview</h2>
       </div>
-      <div class="projects-container services-grid">
-        <article class="project-card service-card"><span class="card-badge">01</span><h3>Web App Design & Build</h3><p>Responsive interfaces, dashboards, portfolio sites, and business tools with a soft visual system and production-ready code.</p></article>
-        <article class="project-card service-card"><span class="card-badge">02</span><h3>AI & Data Features</h3><p>Prediction workflows, Python automation, ML dashboards, and model-backed product features that turn data into useful decisions.</p></article>
-        <article class="project-card service-card"><span class="card-badge">03</span><h3>Backend & Cloud Workflows</h3><p>APIs, database design, .NET services, CI/CD pipelines, and deployment foundations for stable, scalable products.</p></article>
+
+      <div class="about-grid">
+        <div class="code-panel tilt-card" data-tilt>
+          <div class="code-panel-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-panel-title mono">profile.json</span>
+          </div>
+          <pre class="code-panel-body mono"><code><span class="tok-punc">{</span>
+  <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"Khalil Al Youssef"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"role"</span><span class="tok-punc">:</span> <span class="tok-str">"Full Stack Developer"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"experience"</span><span class="tok-punc">:</span> <span class="tok-str">"4+ years"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"stack"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">".NET Core"</span><span class="tok-punc">,</span> <span class="tok-str">"React"</span><span class="tok-punc">,</span> <span class="tok-str">"Next.js"</span><span class="tok-punc">,</span> <span class="tok-str">"Azure"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+  <span class="tok-key">"location"</span><span class="tok-punc">:</span> <span class="tok-str">"Beirut, Lebanon"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"currentFocus"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">"Cloud-native architecture"</span><span class="tok-punc">,</span> <span class="tok-str">"LLM integration"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+  <span class="tok-key">"languages"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">"Arabic"</span><span class="tok-punc">,</span> <span class="tok-str">"English"</span><span class="tok-punc">,</span> <span class="tok-str">"French"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+  <span class="tok-key">"status"</span><span class="tok-punc">:</span> <span class="tok-str">"open_to_work"</span>
+<span class="tok-punc">}</span></code></pre>
+        </div>
+
+        <div class="about-copy">
+          <p>Full Stack .NET Developer with 4+ years of hands-on experience (2 full-time, 2+ freelance) designing and delivering production web applications using .NET Core, React, and Next.js.</p>
+          <p>Track record of building end-to-end systems — REST APIs, RBAC authentication, SQL-optimized backends, and CI/CD-deployed services — across healthcare, e-commerce, and AI domains. Currently expanding into cloud-native architecture (Azure) and LLM integration.</p>
+
+          <div class="lang-list" aria-label="Languages">
+            <div class="lang-row">
+              <span class="lang-name">Arabic</span>
+              <span class="lang-bar"><span class="lang-fill" style="--level:1"></span></span>
+              <span class="lang-level mono">Native</span>
+            </div>
+            <div class="lang-row">
+              <span class="lang-name">English</span>
+              <span class="lang-bar"><span class="lang-fill" style="--level:0.9"></span></span>
+              <span class="lang-level mono">Advanced</span>
+            </div>
+            <div class="lang-row">
+              <span class="lang-name">French</span>
+              <span class="lang-bar"><span class="lang-fill" style="--level:0.85"></span></span>
+              <span class="lang-level mono">Advanced</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="skills" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">Tech arsenal</p>
-        <h2><span class="section-symbol">✦</span>Technical Skills</h2>
+        <p class="eyebrow mono">02. Skills</p>
+        <h2>Technical Skills</h2>
       </div>
-      <div class="all_skills">
-        <div class="skill"><img src="html_finalprojimages/html5.png" alt="HTML5"><h3>HTML5</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/CSS3.png" alt="CSS3"><h3>CSS3</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/js.jpeg" alt="JavaScript"><h3>JavaScript</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/java.png" alt="Java"><h3>Java</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/node.png" alt="Node.js"><h3>Node.js</h3><p>1 Year</p></div>
-        <div class="skill"><img src="html_finalprojimages/deep-learning.png" alt="AI and machine learning"><h3>AI / ML</h3><p>2 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/sql-server.png" alt="SQL Server"><h3>SQL</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/c-sharp.png" alt="C sharp"><h3>C#</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/social.png" alt="jQuery"><h3>jQuery</h3><p>2 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/python.png" alt="Python"><h3>Python</h3><p>2 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/php.png" alt="PHP"><h3>PHP</h3><p>3 Years</p></div>
-        <div class="skill"><img src="html_finalprojimages/react.png" alt="React"><h3>React</h3><p>1 Year</p></div>
-      </div>
-    </section>
 
-    <section id="projects" class="section-panel">
-      <div class="section-heading">
-        <p class="eyebrow">Mission log</p>
-        <h2><span class="section-symbol">✦</span>Highlighted Projects</h2>
-      </div>
-      <div class="projects-container">
-        <article class="project-card featured-card"><span class="card-badge">Web</span><h3>Restaurant Website</h3><p>Responsive website built with HTML, CSS, and JavaScript, featuring an interactive menu, refined layout, and mobile-first experience.</p></article>
-        <article class="project-card featured-card"><span class="card-badge">AI</span><h3>Cryptocurrency Prediction</h3><p>Built LSTM and Random Forest forecasting models with a Flask dashboard to turn market data into readable prediction workflows.</p></article>
-        <article class="project-card featured-card"><span class="card-badge">Game</span><h3>3D Car Simulation Game</h3><p>Unity 3D driving game with C# physics-based controls, collision systems, and responsive gameplay mechanics.</p></article>
-        <article class="project-card featured-card"><span class="card-badge">.NET</span><h3>Online Bookstore Management</h3><p>ASP.NET Core MVC application for inventory, users, and orders using Entity Framework Core and LINQ.</p></article>
+      <div class="skills-grid">
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">01</span>
+          <h3>Backend</h3>
+          <p>APIs, auth, and services built for scale.</p>
+          <div class="pill-cloud">
+            <span>.NET Core 6/8</span><span>ASP.NET MVC</span><span>Entity Framework Core</span><span>LINQ</span><span>Node.js</span><span>Express.js</span><span>PHP</span><span>REST APIs</span><span>GraphQL</span><span>SignalR</span><span>JWT Auth</span><span>ASP.NET Core Identity</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">02</span>
+          <h3>Frontend</h3>
+          <p>Interfaces built with modern, typed React.</p>
+          <div class="pill-cloud">
+            <span>React.js</span><span>Next.js 14 (App Router)</span><span>TypeScript</span><span>JavaScript (ES2022+)</span><span>Tailwind CSS</span><span>Bootstrap</span><span>HTML5</span><span>CSS3</span><span>Redux Toolkit</span><span>React Query</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">03</span>
+          <h3>Databases</h3>
+          <p>Schema design and performance tuning.</p>
+          <div class="pill-cloud">
+            <span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Entity Framework Core</span><span>Prisma ORM</span><span>Query Optimization</span><span>Indexing Strategies</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">04</span>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Shipping and running services on Azure.</p>
+          <div class="pill-cloud">
+            <span>Microsoft Azure</span><span>Azure App Service</span><span>Azure Functions</span><span>Blob Storage</span><span>Service Bus</span><span>Azure DevOps</span><span>Docker</span><span>CI/CD Pipelines</span><span>GitHub Actions</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">05</span>
+          <h3>Mobile</h3>
+          <p>Cross-platform apps from one codebase.</p>
+          <div class="pill-cloud">
+            <span>.NET MAUI</span><span>iOS</span><span>Android</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card" data-tilt>
+          <span class="skill-index mono">06</span>
+          <h3>AI / ML</h3>
+          <p>Model-backed features and LLM integration.</p>
+          <div class="pill-cloud">
+            <span>Python</span><span>TensorFlow</span><span>Scikit-learn</span><span>OpenAI API Integration</span><span>Azure AI Services</span>
+          </div>
+        </article>
+
+        <article class="skill-card tilt-card wide" data-tilt>
+          <span class="skill-index mono">07</span>
+          <h3>Practices</h3>
+          <p>How I plan, build, and ship.</p>
+          <div class="pill-cloud">
+            <span>Agile/Scrum</span><span>Clean Architecture</span><span>RBAC</span><span>Unit Testing (xUnit, Moq)</span><span>OOP</span><span>SOLID Principles</span><span>API-First Design</span><span>Postman</span><span>Jira</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="experience" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">Battle-tested delivery</p>
-        <h2><span class="section-symbol">✦</span>Experience</h2>
+        <p class="eyebrow mono">03. Experience</p>
+        <h2>Professional Experience</h2>
       </div>
+
       <div class="timeline">
-        <article class="project-card timeline-card">
-          <span class="timeline-date">2023–2025</span>
-          <h3>SADER, Beirut</h3>
-          <ul>
-            <li>Built scalable .NET Core web applications with AI/ML integration.</li>
-            <li>Enhanced user experience using AJAX and optimized SQL queries.</li>
-            <li>Collaborated in Agile sprints and maintained Git repositories.</li>
-          </ul>
+        <article class="timeline-item tilt-card" data-tilt>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>.NET Developer</h3>
+                <p class="timeline-org mono">Allianz &middot; Remote</p>
+              </div>
+              <span class="timeline-date mono">2021 &ndash; 2025</span>
+            </div>
+            <ul>
+              <li>Engineered 3+ production web modules using .NET Core, ASP.NET MVC, Entity Framework Core, and React — reducing average SQL query execution time by ~35% through indexing and query refactoring.</li>
+              <li>Developed and shipped cross-platform mobile features using .NET MAUI, integrated with Azure DevOps CI/CD pipelines, maintaining 95%+ build success rates across iOS and Android targets.</li>
+              <li>Built RESTful APIs consumed by multiple internal systems, implementing JWT authentication, role-based access control, and Swagger documentation in an Agile team environment.</li>
+              <li>Contributed AI-powered search and content features to the platform, integrating third-party APIs and improving backend response times through caching strategies and optimized data access layers.</li>
+            </ul>
+            <div class="pill-cloud">
+              <span>.NET Core</span><span>ASP.NET MVC</span><span>EF Core</span><span>React</span><span>.NET MAUI</span><span>Azure DevOps</span><span>JWT</span><span>RBAC</span>
+            </div>
+          </div>
         </article>
-        <article class="project-card timeline-card">
-          <span class="timeline-date">2023–Present</span>
-          <h3>Freelancer</h3>
-          <ul>
-            <li>Delivered full-stack applications using PHP, .NET, and React.</li>
-            <li>Integrated APIs, CI/CD pipelines, and cloud-ready solutions.</li>
-          </ul>
+
+        <article class="timeline-item tilt-card" data-tilt>
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>Freelance Full Stack Developer</h3>
+                <p class="timeline-org mono">Self-Employed</p>
+              </div>
+              <span class="timeline-date mono">Feb 2023 &ndash; Present</span>
+            </div>
+            <ul>
+              <li>Delivered 5+ client web applications using .NET Core, Next.js, PHP, and PostgreSQL — including authentication systems, RBAC, and third-party API integrations (payment gateways, email services, SMS APIs).</li>
+              <li>Architected JWT-based auth and role-based access control for 3+ client systems using ASP.NET Core Identity and Next.js middleware, supporting multiple user roles with granular permission sets.</li>
+              <li>Improved SQL Server and PostgreSQL query performance on a high-traffic client application, reducing page load times by ~40% through index optimization and query restructuring.</li>
+              <li>Designed scalable REST API backends and integrated payment gateways, reducing manual data-entry workflows for clients by automating previously manual booking and inventory processes.</li>
+            </ul>
+            <div class="pill-cloud">
+              <span>.NET Core</span><span>Next.js</span><span>PHP</span><span>PostgreSQL</span><span>ASP.NET Core Identity</span><span>Payment Gateways</span>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="process" class="section-panel process-section">
+    <section id="projects" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">Smooth project flow</p>
-        <h2><span class="section-symbol">✦</span>Creative Process</h2>
+        <p class="eyebrow mono">04. Projects</p>
+        <h2>Selected Projects</h2>
       </div>
-      <div class="process-path" aria-label="Project process steps">
-        <article><span>1</span><h3>Discover</h3><p>Map goals, users, constraints, and the story your product should tell.</p></article>
-        <article><span>2</span><h3>Prototype</h3><p>Shape flows, visuals, and technical architecture before heavy build work.</p></article>
-        <article><span>3</span><h3>Build</h3><p>Develop clean frontend, backend, data, and integrations with iterative demos.</p></article>
-        <article><span>4</span><h3>Polish</h3><p>Refine motion, accessibility, performance, and launch readiness.</p></article>
+
+      <div class="projects-grid">
+        <article class="project-card tilt-card" data-tilt>
+          <div class="project-thumb"><span class="project-glyph mono">&#10015;</span></div>
+          <div class="project-card-top">
+            <span class="project-badge">Healthcare</span>
+          </div>
+          <h3>Dental Clinic Management System</h3>
+          <p>Full-stack clinic platform supporting patient records, appointment scheduling, and billing across 3 user roles (admin, dentist, receptionist). Eliminated scheduling conflicts and reduced appointment booking time by removing the manual paper-based process.</p>
+          <div class="pill-cloud">
+            <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>RBAC</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card" data-tilt>
+          <div class="project-thumb"><span class="project-glyph mono">&#10022;</span></div>
+          <div class="project-card-top">
+            <span class="project-badge">AI / LLM</span>
+          </div>
+          <h3>Career Mentor Platform</h3>
+          <p>AI-powered career guidance tool with skill gap analysis, personalized learning path generation via the OpenAI API, JWT authentication, and interactive dashboards. Demonstrates LLM output parsing and structured AI response handling in a Next.js App Router architecture.</p>
+          <div class="pill-cloud">
+            <span>Next.js 14</span><span>Prisma ORM</span><span>PostgreSQL</span><span>OpenAI API</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card" data-tilt>
+          <div class="project-thumb"><span class="project-glyph mono">&#9670;</span></div>
+          <div class="project-card-top">
+            <span class="project-badge">E-Commerce</span>
+          </div>
+          <h3>Online Bookstore Management System</h3>
+          <p>E-commerce platform with advanced search/filter, Stripe payment integration, and admin inventory management. Responsive UI with Bootstrap, deployed via Azure App Service with an automated CI/CD pipeline.</p>
+          <div class="pill-cloud">
+            <span>ASP.NET Core MVC</span><span>SQL Server</span><span>Stripe</span><span>Azure App Service</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="education" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">Training grounds</p>
-        <h2><span class="section-symbol">✦</span>Education</h2>
-      </div>
-      <div class="projects-container compact-grid">
-        <article class="project-card"><h3>Lebanese International University</h3><p>B.S. in Computer Science (2021–2024)</p></article>
-        <article class="project-card"><h3>TLC Jdaideh</h3><p>BT3 in Information Technology (2018–2019)</p></article>
-      </div>
-    </section>
-
-    <section id="showcase" class="section-panel showcase-section">
-      <div class="section-heading">
-        <p class="eyebrow">Design principles</p>
-        <h2><span class="section-symbol">✦</span>Portfolio Atmosphere</h2>
-      </div>
-      <div class="showcase-panel">
-        <div><strong>Soft Motion</strong><p>Gentle reveals, floating layers, and calm hover states keep the page feeling smooth instead of noisy.</p></div>
-        <div><strong>Readable Story</strong><p>Every section is organized like a guided journey from skills to projects, process, and proof.</p></div>
-        <div><strong>Nature Palette</strong><p>Warm paper, forest greens, sky blues, and sunlit amber create a cozy Ghibli-like mood.</p></div>
-      </div>
-    </section>
-
-    <section id="certificates" class="section-panel">
-      <div class="section-heading">
-        <p class="eyebrow">Proof of mastery</p>
-        <h2><span class="section-symbol">✦</span>Certificates</h2>
+        <p class="eyebrow mono">05. Education</p>
+        <h2>Education &amp; Certifications</h2>
       </div>
 
-      <div class="certificates-wrapper">
-        <button class="scroll-btn left" type="button" aria-label="Scroll certificates left" data-certificate-scroll="-1">&#10094;</button>
-        <div class="certificates-container" id="certificatesContainer">
-          <article class="certificate-card"><a href="https://www.credly.com/badges/557c188f-c67f-49d6-8bb8-457a689eb144/linked_in?t=sfaa15" target="_blank" rel="noopener"><img src="html_finalprojimages/cyberops.JPG" alt="Network Security certificate"></a><p>Network Security (2024)</p></article>
-          <article class="certificate-card"><a href="https://www.coursera.org/account/accomplishments/verify/3SHY6M420KNF" target="_blank" rel="noopener"><img src="html_finalprojimages/intro to software.JPG" alt="IBM Software Engineering certificate"></a><p>IBM – Software Engineering</p></article>
-          <article class="certificate-card"><a href="https://www.credly.com/badges/3d211655-bcd5-44e2-bf4b-3f1d8d704028/public_url" target="_blank" rel="noopener"><img src="html_finalprojimages/python1.JPG" alt="Cisco Python Essentials 1 certificate"></a><p>CISCO – Python Essentials 1</p></article>
-          <article class="certificate-card"><a href="https://learn.microsoft.com/en-us/users/khalilyoussef-3867/achievements" target="_blank" rel="noopener"><img src="html_finalprojimages/Certificates From Microsoft.JPG" alt="Microsoft certificates"></a><p>Microsoft – Certificates</p></article>
-          <article class="certificate-card"><a href="https://www.coursera.org/account/accomplishments/certificate/AW2A64GRCRV5" target="_blank" rel="noopener"><img src="html_finalprojimages/Intro to Cloud.JPG" alt="IBM Intro to Cloud Computing certificate"></a><p>IBM – Intro to Cloud Computing</p></article>
-          <article class="certificate-card"><a href="html_finalprojimages/python2.JPG" target="_blank" rel="noopener"><img src="html_finalprojimages/python2.JPG" alt="Cisco Python Essentials 2 certificate"></a><p>CISCO – Python Essentials 2</p></article>
-          <article class="certificate-card"><a href="https://www.credly.com/badges/e3d41251-6d4a-40d7-abd2-228859946ac8/public_url" target="_blank" rel="noopener"><img src="html_finalprojimages/Intro to machine learning.JPG" alt="Cisco Intro to Machine Learning certificate"></a><p>CISCO – Intro To Machine Learning</p></article>
+      <div class="education-card tilt-card" data-tilt>
+        <div>
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p class="timeline-org mono">Lebanese International University &middot; Beirut</p>
         </div>
-        <button class="scroll-btn right" type="button" aria-label="Scroll certificates right" data-certificate-scroll="1">&#10095;</button>
+        <span class="timeline-date mono">2021 &ndash; 2024</span>
+      </div>
+
+      <div class="cert-grid">
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front">
+              <img src="html_finalprojimages/cyberops.JPG" alt="" class="cert-thumb">
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">CyberOps Associate</span>
+              <span class="cert-face-issuer mono">Cisco</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Credential</span>
+              <span class="cert-back-title">CyberOps Associate</span>
+              <span class="cert-back-issuer mono">Issued by Cisco</span>
+              <a class="cert-verify" href="https://www.credly.com/badges/557c188f-c67f-49d6-8bb8-457a689eb144/linked_in?t=sfaa15" target="_blank" rel="noopener">Verify credential &#8599;</a>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front">
+              <img src="html_finalprojimages/python1.JPG" alt="" class="cert-thumb">
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">Python Essentials 1</span>
+              <span class="cert-face-issuer mono">Cisco</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Credential</span>
+              <span class="cert-back-title">Python Essentials 1</span>
+              <span class="cert-back-issuer mono">Issued by Cisco</span>
+              <a class="cert-verify" href="https://www.credly.com/badges/3d211655-bcd5-44e2-bf4b-3f1d8d704028/public_url" target="_blank" rel="noopener">Verify credential &#8599;</a>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front">
+              <img src="html_finalprojimages/python2.JPG" alt="" class="cert-thumb">
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">Python Essentials 2</span>
+              <span class="cert-face-issuer mono">Cisco</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Credential</span>
+              <span class="cert-back-title">Python Essentials 2</span>
+              <span class="cert-back-issuer mono">Issued by Cisco</span>
+              <a class="cert-verify" href="html_finalprojimages/python2.JPG" target="_blank" rel="noopener">View certificate &#8599;</a>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front cert-front-plain">
+              <span class="cert-glyph mono">&#10015;</span>
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">Cloud Application Development Foundations</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Status</span>
+              <span class="cert-back-title">Completed</span>
+              <span class="cert-back-issuer mono">No public verification link on file</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front cert-front-plain">
+              <span class="cert-glyph mono">&#10022;</span>
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">Introduction to Generative AI</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Status</span>
+              <span class="cert-back-title">Completed</span>
+              <span class="cert-back-issuer mono">No public verification link on file</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front cert-front-plain">
+              <span class="cert-glyph mono">&#9670;</span>
+              <span class="status-chip done mono">Certified</span>
+              <span class="cert-face-title">Django Application Development with SQL and Databases</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Status</span>
+              <span class="cert-back-title">Completed</span>
+              <span class="cert-back-issuer mono">No public verification link on file</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front cert-front-plain">
+              <span class="cert-glyph mono">&#9711;</span>
+              <span class="status-chip progress mono">In Progress</span>
+              <span class="cert-face-title">AZ-900: Azure Fundamentals</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Status</span>
+              <span class="cert-back-title">In Progress</span>
+              <span class="cert-back-issuer mono">Microsoft Azure Fundamentals</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="cert-flip" type="button">
+          <span class="cert-flip-inner">
+            <span class="cert-face cert-front cert-front-plain">
+              <span class="cert-glyph mono">&#9711;</span>
+              <span class="status-chip target mono">Target</span>
+              <span class="cert-face-title">AZ-204: Azure Developer Associate</span>
+            </span>
+            <span class="cert-face cert-back">
+              <span class="cert-back-label mono">Status</span>
+              <span class="cert-back-title">Target &middot; Q3 2026</span>
+              <span class="cert-back-issuer mono">Microsoft Azure Developer Associate</span>
+            </span>
+          </span>
+        </button>
       </div>
     </section>
 
-    <section id="devops" class="section-panel">
-      <div class="section-heading">
-        <p class="eyebrow">Deployment kit</p>
-        <h2><span class="section-symbol">✦</span>DevOps & Tools</h2>
-      </div>
-      <div class="all_skills">
-        <div class="skill"><img src="html_finalprojimages/git.png" alt="Git"><h3>Git / GitHub</h3><p>Version Control</p></div>
-        <div class="skill"><img src="html_finalprojimages/docker.png" alt="Docker"><h3>Docker</h3><p>Containerization</p></div>
-        <div class="skill"><img src="html_finalprojimages/github.png" alt="GitHub Actions"><h3>CI/CD</h3><p>GitHub Actions</p></div>
-        <div class="skill"><img src="html_finalprojimages/api.png" alt="Postman"><h3>Postman</h3><p>API Testing</p></div>
-        <div class="skill"><img src="html_finalprojimages/visual-studio.png" alt="Visual Studio"><h3>VS Code / Visual Studio</h3><p>IDE Tools</p></div>
-        <div class="skill"><img src="html_finalprojimages/gamification.png" alt="Unity"><h3>Unity</h3><p>Game Development</p></div>
+    <section id="contact" class="section-panel">
+      <div class="contact-cta code-panel">
+        <div class="code-panel-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-panel-title mono">contact.sh</span>
+        </div>
+        <div class="contact-body">
+          <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span>Let's build something great</p>
+          <h2>Get In Touch</h2>
+          <p class="contact-lede">I'm currently open to mid-level Software Engineer, .NET Developer, and Full Stack Developer roles. Reach out — I usually reply within a day.</p>
+
+          <div class="contact-grid">
+            <a class="contact-link" href="mailto:khalilooyoussef@gmail.com">
+              <img src="html_finalprojimages/envelope.png" alt="" class="contact-icon">
+              <span>khalilooyoussef@gmail.com</span>
+            </a>
+            <a class="contact-link" href="tel:+96171765370">
+              <img src="html_finalprojimages/phone.png" alt="" class="contact-icon">
+              <span>+961 71 76 53 70</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/khalil-el-youssef-a4a1a1203/" target="_blank" rel="noopener">
+              <img src="html_finalprojimages/icons8-linkedin-50 (1).png" alt="" class="contact-icon">
+              <span>linkedin.com/in/khalil-el-youssef</span>
+            </a>
+            <a class="contact-link" href="https://github.com/KhalilCodely" target="_blank" rel="noopener">
+              <img src="html_finalprojimages/github.png" alt="" class="contact-icon">
+              <span>github.com/KhalilCodely</span>
+            </a>
+          </div>
+
+          <p class="contact-location mono">&#128205; Beirut, Lebanon</p>
+        </div>
       </div>
     </section>
   </main>
 
   <a class="iconbutton" href="#top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="25" aria-hidden="true">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="22" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
     </svg>
   </a>
 
   <footer>
-    © 2026 Khalil El Youssef — Portfolio. Built with strategy, polish, and code.
+    <p>Designed &amp; built by Khalil Al Youssef &middot; <span class="mono">&copy; 2026</span></p>
   </footer>
+
+  <script type="module" src="scene.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
